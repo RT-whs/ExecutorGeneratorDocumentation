@@ -21,9 +21,9 @@ jobs:
       - name: Install MkDocs and dependencies
         run: |
           pip install mkdocs mkdocs-material
-	
-	- name: Install mkdocs-minify-plugin
-  	run: pip install mkdocs-minify-plugin
+
+      - name: Install mkdocs-minify-plugin
+        run: pip install mkdocs-minify-plugin
       
       - name: Build and deploy
         run: |
