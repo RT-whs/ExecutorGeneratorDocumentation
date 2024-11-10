@@ -3,11 +3,17 @@ repo_url: https://github.com/RT-whs/ExecutorGeneratorDocumentation
 
 nav:
   - Home: index.md
-  - Readme: README.md
+  - About: about.md
 
 theme:
   #name: mkdocs
   name: material   # Pokud chceš použít Material theme, přidej tento řádek a uprav požadované téma
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
 
 markdown_extensions:
   - codehilite
