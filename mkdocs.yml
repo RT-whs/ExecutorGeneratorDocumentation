@@ -12,6 +12,7 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.preview
+    - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
 
