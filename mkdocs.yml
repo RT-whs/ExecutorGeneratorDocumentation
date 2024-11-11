@@ -1,11 +1,13 @@
-site_name: ExecutorGenerator Documentation
+site_name: Documentation for plc programmers
 repo_url: https://github.com/RT-whs/ExecutorGeneratorDocumentation
 
 
 theme:
-  #name: mkdocs
-  name: material   # Pokud chceš použít Material theme, přidej tento řádek a uprav požadované téma
-  logo: 'images/WHS_JAG_Robotics_2023_logo.png'  # Cesta k logu (relativní ke složce docs)
+  name: material
+  palette:
+    scheme: whs
+  
+  logo: 'images/WHS_JAG_Robotics_2023_logo.png'
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -16,24 +18,32 @@ theme:
     - search.suggest
     - search.highlight
     - content.tabs.link
+    - header.autohide
+    - content.code.copy
+
 
 markdown_extensions:
   - codehilite
   - admonition
   - footnotes
   - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  
   - toc:
       permalink: true
 
 # For deploying on GitHub pages
 plugins:
   - search
-  - minify:  # Optimize HTML files
-      minify_html: true
+  - glightbox
+
+
 
 # Optional: Custom CSS or JavaScript files
 extra_css:
-  - 'styles/custom.css'
+  - 'stylesheets/custom.css'
 extra_javascript:
   - 'javascripts/custom.js'
 
@@ -41,5 +51,11 @@ nav:
   - Home: index.md
   - Documentation: 
     - This documentation: docu/index.md
+    - Executor generator: eg/index.md
     - About: about.md
+
+hide:
+  - navigation
+  - toc
+  - footer
 
