@@ -1,6 +1,6 @@
 /* Změna barvy hlavního labelu (např. názvu stránky nebo záhlaví) na bílou */
-.md-header {
-    color: white;
+.md-header, .md-header__title, .md-header__inner {
+    color: white !important;
 }
 
 /* Pokud chcete změnit barvu textu v hlavní navigaci */

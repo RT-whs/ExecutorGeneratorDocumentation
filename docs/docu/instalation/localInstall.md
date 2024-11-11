@@ -1,2 +1,2 @@
-# Local installation of this docu
+# Local installation of this documentation
 missing guide

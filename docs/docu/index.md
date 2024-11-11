@@ -4,4 +4,4 @@ Simply open this link [Whs online documentation](https://rt-whs.github.io/Execut
 
 # Installation
 Follow this guide to install this documentation on your machine.
-[Whs offline installation of documentation ](/docs/docu/instalation/localInstall.md)
+[Whs offline installation of documentation ](instalation/localInstall.md)
