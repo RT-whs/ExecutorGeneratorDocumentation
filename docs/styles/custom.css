@@ -1,0 +1,9 @@
+/* Změna barvy hlavního labelu (např. názvu stránky nebo záhlaví) na bílou */
+.md-header {
+    color: white;
+}
+
+/* Pokud chcete změnit barvu textu v hlavní navigaci */
+.md-nav__link {
+    color: #44779c;
+}

@@ -8,6 +8,7 @@ nav:
 theme:
   #name: mkdocs
   name: material   # Pokud chceš použít Material theme, přidej tento řádek a uprav požadované téma
+  logo: 'images/WHS_JAG_Robotics_2023_logo.png'  # Cesta k logu (relativní ke složce docs)
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -32,6 +33,6 @@ plugins:
 
 # Optional: Custom CSS or JavaScript files
 extra_css:
-  - 'stylesheets/custom.css'
+  - 'styles/custom.css'
 extra_javascript:
   - 'javascripts/custom.js'
