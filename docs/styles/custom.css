@@ -5,9 +5,6 @@
 
 /* Pokud chcete změnit barvu textu v hlavní navigaci */
 .md-nav__link {
-    color: #44779c;
+    color: #022742;
 }
 
-body {
-    background-color: red;
-}

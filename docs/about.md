@@ -1,13 +1,15 @@
 # WHS sw documentation
-This documentation is created for jag plc programmers.
-Contains help for 
-*B+R plc
-*Siemens plc
-*Kuka robots
-*Fanuc robots
-<br>
-Use only english language.
+This documentation is created for jag plc programmers.  
+Contains these domains:
+* This documentation
+* Executor generator
+* B+R plc
+* Siemens plc
+* Kuka robots
+* Fanuc robots
+  
 
-By clicking on GitHub icon you can edit this documentation repository.
+Uses only english language.  
+Allows user editing.
 
 

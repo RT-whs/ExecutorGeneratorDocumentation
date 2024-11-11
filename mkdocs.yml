@@ -1,9 +1,6 @@
 site_name: ExecutorGenerator Documentation
 repo_url: https://github.com/RT-whs/ExecutorGeneratorDocumentation
 
-nav:
-  - Home: index.md
-  - About: about.md
 
 theme:
   #name: mkdocs
@@ -16,6 +13,9 @@ theme:
     - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
 
 markdown_extensions:
   - codehilite
@@ -25,10 +25,10 @@ markdown_extensions:
   - toc:
       permalink: true
 
-# Pro nasazení na GitHub Pages
+# For deploying on GitHub pages
 plugins:
   - search
-  - minify:  # Optimalizace souborů HTML
+  - minify:  # Optimize HTML files
       minify_html: true
 
 # Optional: Custom CSS or JavaScript files
@@ -36,3 +36,9 @@ extra_css:
   - 'styles/custom.css'
 extra_javascript:
   - 'javascripts/custom.js'
+
+nav:
+  - Documentation: 
+    - This documentation: docu/index.md
+  - About: about.md
+
