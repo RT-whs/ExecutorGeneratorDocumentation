@@ -30,7 +30,9 @@ jobs:
           pip install mkdocs mkdocs-material
 
       - name: Install mkdocs-minify-plugin
-        run: pip install mkdocs-minify-plugin
+        run: pip install mkdocs-minify-plugin mkdocs-glightbox
+
+
       
       - name: Build and deploy
         run: |
