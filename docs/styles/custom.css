@@ -7,3 +7,7 @@
 .md-nav__link {
     color: #44779c;
 }
+
+body {
+    background-color: red;
+}
