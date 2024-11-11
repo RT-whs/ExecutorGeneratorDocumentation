@@ -38,7 +38,8 @@ extra_javascript:
   - 'javascripts/custom.js'
 
 nav:
+  - Home: index.md
   - Documentation: 
     - This documentation: docu/index.md
-  - About: about.md
+    - About: about.md
 
