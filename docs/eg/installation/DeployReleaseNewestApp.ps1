@@ -45,7 +45,12 @@ Write-Host "Downloading latest version: $selected_version"
 Write-Host "Download URL: $download_url"
 
 # Download the selected version
-Invoke-WebRequest -Uri $download_url -Headers @{Authorization = "token $token"} -OutFile "$folderPath\EGreleases.zip" -ErrorAction Stop
+try {
+    Invoke-WebRequest -Uri $download_url -Headers @{Authorization = "token $token"} -OutFile "$folderPath\EGreleases.zip" -ErrorAction Stop
+} catch {
+    Write-Host "Error when downloading file: $_"
+    exit 1  # Ukončí skript s kódem chyby 1
+}
 
 # Unzip the application directly into a temporary folder
 $tempFolder = "$folderPath\temp"
