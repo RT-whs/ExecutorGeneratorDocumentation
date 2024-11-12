@@ -12,14 +12,28 @@ a {
 h1 {
   font-size: 1rem !important;  /* Nastavení velikosti písma pro všechny nadpisy */
   line-height: 1.0;  /* Výška řádku pro lepší čitelnost */
-  font-weight: bold; /* Volitelné: změna tloušťky písma */
+  font-weight: bold !important; /* Volitelné: změna tloušťky písma */
   color: #17678f !important;
 }
 
-h2, h3, h4, h5, h6 {
+h2 {
   font-size: 0.7rem !important;  /* Nastavení velikosti písma pro všechny nadpisy */
   line-height: 1.0;  /* Výška řádku pro lepší čitelnost */  
+  font-weight: bold !important; 
   color: #17678f !important;
+}
+
+h3 {
+  font-size: 0.65rem !important;  /* Nastavení velikosti písma pro všechny nadpisy */
+  line-height: 1.0;  /* Výška řádku pro lepší čitelnost */  
+  color: #57678f !important;
+}
+
+h4 {
+  font-size: 0.6rem !important;  /* Nastavení velikosti písma pro všechny nadpisy */
+  line-height: 1.0;  /* Výška řádku pro lepší čitelnost */  
+  font-weight: normal !important; /* Volitelné: změna tloušťky písma */
+  color: #606779 !important;
 }
 
 ul li {
@@ -42,6 +56,7 @@ ol li {
   --md-primary-fg-color--light: white;
   --md-primary-fg-color--dark:  #445555;
   --md-primary-bg-color:       #17678f;
+  --md-secondary-fg-color:       red;
   
 }
 
