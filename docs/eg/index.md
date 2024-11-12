@@ -8,6 +8,11 @@ Here is described installation of executor generator app.
 
         PowerShell -ExecutionPolicy Bypass -File .\DeployReleaseNewestApp.ps1 
 
+1.  Create shortcut for installed app
+## Updates
+Application has own automatic update system. When checking public packages on git-hub. When exist new release automatically deploy on local machine after user confirmation.  
+The server location of packages is at [https://github.com/RT-whs/EGreleases/releases:](https://github.com/RT-whs/EGreleases/releases)
+
 ## Switch to older version
 
 1.  Copy from path ```YourTopFolder\DeployedApp\Tools\Git``` file ```DeployReleaseApp.ps1``` to ```YourTopFolder```
