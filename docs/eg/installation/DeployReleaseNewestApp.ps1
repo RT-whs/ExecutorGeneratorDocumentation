@@ -26,8 +26,13 @@ $token = Read-Host "Please paste your token here"
 Write-Host "Your token is: $token"
 
 
-$response = Invoke-RestMethod -Uri "https://api.github.com/repos/RT-whs/EGreleases/tags" -Headers @{Authorization = "token $token"}
+$response = Invoke-RestMethod -Uri "https://api.github.com/repos/RT-whs/EGreleases/tags" -Headers @{Authorization = "token $token"} 
 $latestRelease = $response | Select-Object -First 1 # Get the latest release
+
+if ($response -eq $null) {
+    Write-Host "Failed to fetch data from GitHub API"
+    exit
+}
 
 # Extract the version number (remove 'v' prefix if exists)
 $selected_version = $latestRelease.name -replace '^v', ''
@@ -40,25 +45,25 @@ Write-Host "Downloading latest version: $selected_version"
 Write-Host "Download URL: $download_url"
 
 # Download the selected version
-Invoke-WebRequest -Uri $download_url -Headers @{Authorization = "token $token"} -OutFile "$folderPath\EGreleases.zip"
+Invoke-WebRequest -Uri $download_url -Headers @{Authorization = "token $token"} -OutFile "$folderPath\EGreleases.zip" -ErrorAction Stop
 
 # Unzip the application directly into a temporary folder
 $tempFolder = "$folderPath\temp"
-Expand-Archive -Path "$folderPath\EGreleases.zip" -DestinationPath $tempFolder -Force
+Expand-Archive -Path "$folderPath\EGreleases.zip" -DestinationPath $tempFolder -Force -ErrorAction Stop
 
 # Get the directory name after unzipping
-$extractedFolder = Get-ChildItem -Path $tempFolder | Where-Object { $_.PSIsContainer }
+$extractedFolder = Get-ChildItem -Path $tempFolder | Where-Object { $_.PSIsContainer } -ErrorAction Stop
 
 # Move all files from the extracted folder to the main folder
-Move-Item -Path "$($extractedFolder.FullName)\*" -Destination $folderPath -Force
+Move-Item -Path "$($extractedFolder.FullName)\*" -Destination $folderPath -Force -ErrorAction Stop
 
 # Remove the temporary folder
-Remove-Item -Path $tempFolder -Recurse -Force
+Remove-Item -Path $tempFolder -Recurse -Force -ErrorAction Stop
 
 # Remove the zip file after extraction
-Remove-Item -Path "$folderPath\EGreleases.zip" -Force
+Remove-Item -Path "$folderPath\EGreleases.zip" -Force -ErrorAction Stop
 
 # Remove any hidden files/folders from the main folder
-Get-ChildItem -Path $folderPath -Force | Where-Object { $_.Name.StartsWith('.') } | Remove-Item -Recurse -Force
+Get-ChildItem -Path $folderPath -Force | Where-Object { $_.Name.StartsWith('.') } | Remove-Item -Recurse -Force -ErrorAction Stop
 
 Write-Host "Download and extraction complete."
