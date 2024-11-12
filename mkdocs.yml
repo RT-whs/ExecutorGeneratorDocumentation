@@ -52,7 +52,9 @@ nav:
   - Documentation: 
     - This documentation: docu/index.md
     - Executor generator: eg/index.md
-    - Magna projects: magna/magna.md
+    - Magna projects: 
+      - Standard: magna/magna.md
+      
     - About: about.md
 
 hide:

@@ -28,6 +28,10 @@ Script is used for manual start of documentation. This step do Executor generato
 Reached from website. Click on github icon.  
 Main branch is source for md files.  
 Every commit use CI/CD pipelines to automatic deploy webpage.  
-[https://github.com/RT-whs/ExecutorGeneratorDocumentation](https://github.com/RT-whs/ExecutorGeneratorDocumentation)   
+[https://github.com/RT-whs/ExecutorGeneratorDocumentation](https://github.com/RT-whs/ExecutorGeneratorDocumentation)  
+
+## Getting started 
+Work with repository with this guide:  
+[How to edit this project](https://squidfunk.github.io/mkdocs-material/)  
 
  
