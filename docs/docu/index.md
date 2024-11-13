@@ -29,14 +29,14 @@ Reached from website. Click on github icon.
 Main branch contains md files.
 Gh-pages branch contains deployed website.  
 Every commit use CI/CD pipelines to automatic deploy webpage.  
-[https://github.com/RT-whs/ExecutorGeneratorDocumentation](https://github.com/RT-whs/ExecutorGeneratorDocumentation)  
+[https://github.com/RT-whs/ExecutorGeneratorDocumentation](https://github.com/RT-whs/ExecutorGeneratorDocumentation){:target="_blank"}  
 
 ## Editing locally
 The system MkDocs is based on python. This documentation is based on material design.  
 Follow this steps.  
 
 1.  Install VSCode. (Is recommended due very good work with folder tree)
-1.  Install Python. You can use this [link](https://www.python.org/downloads/). Check the possibility "Add Python to PATH" to publish python to cmd line.
+1.  Install Python. You can use this [link](https://www.python.org/downloads/){:target="_blank"}. Check the possibility "Add Python to PATH" to publish python to cmd line.
 1. Check the Python in shell cmd line by cmd ```python --version```
 1. Upgrade pip installer when you have python longer by 
 
@@ -80,6 +80,6 @@ Simply commit your change to git. The web will be automatically updated within o
 
 ## Getting started 
 How to work with material design guide:  
-[How to edit this project](https://squidfunk.github.io/mkdocs-material/)  
+[How to edit this project](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}  
 
  

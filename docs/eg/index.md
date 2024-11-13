@@ -11,7 +11,7 @@ Here is described installation of executor generator app.
 1.  Create shortcut for installed app
 ## Updates
 Application has own automatic update system. When checking public packages on git-hub. When exist new release automatically deploy on local machine after user confirmation.  
-The server location of packages is at [https://github.com/RT-whs/EGreleases/releases:](https://github.com/RT-whs/EGreleases/releases)
+The server location of packages is at [https://github.com/RT-whs/EGreleases/releases:](https://github.com/RT-whs/EGreleases/releases){:target="_blank"}
 
 ## Switch to older version
 
