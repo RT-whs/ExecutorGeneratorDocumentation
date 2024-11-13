@@ -43,13 +43,18 @@ Follow this steps.
         python -m pip install --upgrade pip
 
 1. Create your folder for documentation
+
+
 1. Reach in terminal to this folder and create python virtual environment. 
 
-        python -m venv venv
+        python -m venv venv        
+    !!! tip "Hint"
+        With Windows 11 in file explorer you can use right mouse click and use "Open in Terminal" in current folder. The path will be taken from current folder.
 
-1. Activate environment by script. Type in shell cmd line
+1. Activate environment by script. Type in shell cmd line.  
+   If you will use VS code than you have to **activate virtual environment also for his terminal.** So simply call this cmd also from there.
 
-        venv/Sripts/activate
+        ./venv/Sripts/activate
 
 1. Install MkDocs material.  Type in shell cmd line 
 
