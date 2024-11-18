@@ -54,6 +54,8 @@ nav:
     - Executor generator: eg/index.md
     - Magna projects: 
       - Standard: magna/magna.md
+    - Tools:
+      - Adapter settings: tools/Adapter settings.md
       
     - About: about.md
 
