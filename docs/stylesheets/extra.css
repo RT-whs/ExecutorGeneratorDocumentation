@@ -1,0 +1,9 @@
+.md-nav__item--nested > .md-nav__link {
+    font-weight: normal; /* Zvýrazní hlavní odkazy */
+    font-size:smaller;
+  }
+  
+  .md-nav__item--nested > .md-nav__list {
+    padding-left: 20px; /* Zvýrazní vnořenou strukturu */
+  }
+  
