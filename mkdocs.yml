@@ -53,9 +53,13 @@ nav:
   - Documentation: 
     - This documentation: docu/index.md
     - Executor generator: eg/index.md
+    - Ipm:
+      - Data from word files: Ipm/IpmGeneral.md
+      - Ipm Results: Ipm/IpmResults.md
     - Magna projects: 
       - Standard: magna/magna.md
     - Tools:
+      - AutoHotKey : tools/AutoHotKey/Autohotkey.md
       - Kicad: tools/Kicad/Kicad.md
       - Adapter settings: tools/Adapter_settings/Adapter_settings.md
       

@@ -16,8 +16,13 @@ Used for automatic converting downloaded part to Kicad format.
 
 1.   Install library loader from site [samacsys](https://www.samacsys.com/library-loader/){:target="_blank"}
 2.   Create your own account on [https://componentsearchengine.com/](https://componentsearchengine.com/)
-3.   Set download folder to scanning in library loader eg```C:\WHS_Temp```.  When you have switched on library loader and download anything to this folder library loader automatically add new part to temporary Kicad library located there. This library will not be joined to KICAD IDE. 
-4.   Adjust settings of library loader. 
+3.   Set download folder to scanning in library loader eg```C:\WHS_Kicad_Temp```.  When you have switched on library loader and download anything to this   folder library loader automatically add new part to temporary Kicad library located there. This library will not be joined to KICAD IDE. 
+4.   Adjust settings of library loader profile. Click on profile
+    
+    <img src="LibraryLoaderMain.jpg" alt="Library loader settings" width="350">
+    <img src="LibraryLoaderProfile.jpg" alt="Library loader settings" width="350">
+
+5.  Adjust location for temporary library. 
 
     <img src="LibraryLoaderSettings.jpg" alt="Library loader settings" width="350">
 
@@ -35,8 +40,14 @@ Internal app to manage libraries in Kicad. Has these functions:
 
 Installation   
 
-1.  Download release from GitHub (Sw is in production)
-2.  
+1.  The app is only plugin to use in Kicad. 
+2.  Download release from GitHub (Sw is in production). The access can give you Martin Myslikovjan, Roman Tomášek or somebody from management.
+3.  Adjust config.json file next the run file. And adjust the patches. 
+
+            "watched_folder": "C:\\WHS_Kicad_Libraries"
+            "symbol_lib_file": "C:\\Users\\rt\\AppData\\Roaming\\kicad\\\8.0\\sym-lib-table"
+            "footprint_lib_file": "C:\\Users\\rt\\AppData\\Roaming\\kicad\\\8.0\\fp-lib-table"
+
 
 
 
