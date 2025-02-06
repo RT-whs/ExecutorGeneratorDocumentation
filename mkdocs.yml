@@ -38,6 +38,8 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   
   - toc:
       permalink: true
@@ -74,6 +76,10 @@ nav:
       - AutoHotKey : tools/AutoHotKey/Autohotkey.md
       - Kicad: tools/Kicad/Kicad.md
       - Adapter settings: tools/Adapter_settings/Adapter_settings.md
+
+    - Functions:
+      - KUKA:
+        - Synchronization: functions/KUKA/Sync.md
       
     - About: about.md
 
