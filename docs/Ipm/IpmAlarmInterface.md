@@ -8,15 +8,15 @@ The main idea of the alarm reader is that we use one general structure for colle
 ### Configuration View
 - Add the configuration file **.mpAlarmXHistory** to the project.
 - Ensure the number of elements in this configuration matches the **maximum number of languages** used in the program variables.
-    <img src="AlarmSynConfView.png" alt="Configuration View">
+    <img src="IpmAlarmInterface/AlarmSynConfView.png" alt="Configuration View">
 - The settings for all elements should be the same as shown in the image below:
     <img src="AlarmSynConfViewSettings.png" alt="Element settings">
  - Insert the program into **CPU.sw**, to the same **Cyclic** as **AlarmCore**.
-    <img src="./IpmAlarmInterface/CpuSW.png" alt="Cpu.sw">
+    <img src="IpmAlarmInterface/CpuSW.png" alt="Cpu.sw">
 
 ### Logical view
  - Copy the program into the **Logical View** of the project.
-    <img src="./IpmAlarmInterface/PrgInserting.png" alt="Program">
+    <img src="IpmAlarmInterface/PrgInserting.png" alt="Program">
 
 ## Description of the data types and variables
 ### Data types
@@ -40,7 +40,7 @@ The main idea of the alarm reader is that we use one general structure for colle
 - Configures HTTP(S) client settings.
 - Defines server details, API endpoint, and response handling.
 
-<img src="./IpmAlarmInterface/DataTypes.png" alt="Data types">
+<img src="IpmAlarmInterface/DataTypes.png" alt="Data types">
 
 ### Variables
 **alarmProcessingBlocked**
@@ -52,7 +52,7 @@ The main idea of the alarm reader is that we use one general structure for colle
 
 **clientSettings**
 - Stores the configuration settings for the HTTP client.
-    <img src="./IpmAlarmInterface/ClientSet.png" alt="Client">
+    <img src="IpmAlarmInterface/ClientSet.png" alt="Client">
 
 **WStringToUTF8**
 - Converts WString data to UTF-8 encoding for proper text transmission.
@@ -91,7 +91,7 @@ The main idea of the alarm reader is that we use one general structure for colle
 **MAX_REQUEST_LEN**
 - Determines the maximum request length for HTTP communication.
 
-<img src="./IpmAlarmInterface/Variables.png" alt="Variables">
+<img src="IpmAlarmInterface/Variables.png" alt="Variables">
 
 ## Description of the source code
 ### Init
@@ -239,7 +239,7 @@ The program consists of two step-based state machines:
 2. Another for creating JSON data from this structure and sending alarms to the HTTP server.  
 
 ??? example "Alarm sender"
-	``` c
+	``` c title = "Alarm sender"
 		switch (alarmSender.step)
 		{
 			case 0:
@@ -329,4 +329,4 @@ https://mockoon.com/download/
 
 ## Source code
 Complete source code for download (After clicking, it takes a moment before the download starts):
-[AlarmMessenger](./IpmAlarmInterface/AlarmMessenger.zip)
+[AlarmMessenger](IpmAlarmInterface/AlarmMessenger.zip)
