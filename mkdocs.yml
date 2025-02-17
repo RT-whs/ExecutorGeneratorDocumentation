@@ -69,7 +69,7 @@ nav:
     - Ipm:
       - Data from word files docu: Ipm/IpmGeneral.md
       - Ipm Results: Ipm/IpmResults.md
-      - Ipm alarming: Ipm/IpmAlarmInterface.md
+      - Ipm alarm synchronization: Ipm/IpmAlarmInterface.md
     - Magna projects: 
       - Standard: magna/magna.md
       - 231080 - IMM 25:
