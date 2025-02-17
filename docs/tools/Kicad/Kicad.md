@@ -32,7 +32,7 @@ Internal app to manage libraries in Kicad. Has these functions:
 1.  Copy new part from temp library of Library Loader
 2.  Copy new part from other libraries to whs structure
 3.  Adds ERP property - user should fill. 
-4.  Can add selected part to HELIOS. 
+4.  Can add selected part to HELIOS. (is planned feature, not now) 
 5.  Copy all files to correct whs library
 6.  Sets all library links from WHS_Kicad_Libraries to KICAD.
 7.  Pushes git to server also when export data to Helios
@@ -47,6 +47,12 @@ Installation
             "watched_folder": "C:\\WHS_Kicad_Libraries"
             "symbol_lib_file": "C:\\Users\\rt\\AppData\\Roaming\\kicad\\\8.0\\sym-lib-table"
             "footprint_lib_file": "C:\\Users\\rt\\AppData\\Roaming\\kicad\\\8.0\\fp-lib-table"
+
+## Debuging and developing
+1.  Execute code from root by typing ```python src/main.py```       
+2.  In VScode start test from test page.    
+3.  Start test from terminal. ```python tests/test.py```    
+
 
 
 

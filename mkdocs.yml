@@ -52,10 +52,14 @@ nav:
   - Home: index.md
   - Documentation: 
     - This documentation: docu/index.md
-    - Executor generator: eg/index.md
+    - Executor generator:
+      - Instalation: eg/index.md
+      - Library system: eg/LibraryManager.md
+      - Project structure: eg/ProjectStructure.md
     - Ipm:
-      - Data from word files: Ipm/IpmGeneral.md
+      - Data from word files docu: Ipm/IpmGeneral.md
       - Ipm Results: Ipm/IpmResults.md
+      - Ipm alarming: Ipm/IpmAlarmInterface.md
     - Magna projects: 
       - Standard: magna/magna.md
     - Tools:
