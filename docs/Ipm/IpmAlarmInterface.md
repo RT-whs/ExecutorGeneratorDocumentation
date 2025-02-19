@@ -70,7 +70,7 @@ The main idea of the alarm reader is that we use one general structure for colle
 **clientSettings**
 - Stores the configuration settings for the HTTPS client.
 
-	![Client](sources/ClientSet.png)
+![Client](sources/ClientSet.png)
 
 **WStringToUTF8**
 - Converts WString data to UTF-8 encoding for proper text transmission.
