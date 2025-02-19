@@ -13,21 +13,21 @@ The main idea of the alarm reader is that we use one general structure for colle
 
 - The settings for all elements should be the same as shown in the image below:
 
-    <img src="./sources/AlarmSynConfViewSettings.png" alt="Element settings">
+	![Element settings](sources/AlarmSynConfViewSettings.png)
 
 - Insert the program into **CPU.sw**, to the same **Cyclic** as **AlarmCore**.
 
-    <img src="/sources/CpuSW.png" alt="Cpu.sw">
+	![Cpu.sw](sources/CpuSW.png)
 
 - Create an SSL configuration and add certificates to the connection.
 
-	<img src="/sources/SSLfolder.png" alt="SslFolder">
-	<img src="/sources/SSLConfig.png" alt="SslConfig">
+	![SslFolder](sources/SSLfolder.png)
+	![SslConfig](sources/SSLConfig.png)
 
 ### Logical view
  - Copy the program into the **Logical View** of the project.
 
-	<img src="sources/PrgInserting.png" alt="Program">
+	![Program](sources/PrgInserting.png)
 
 ## Description of the data types and variables
 ### Data types
@@ -51,7 +51,7 @@ The main idea of the alarm reader is that we use one general structure for colle
 - Configures HTTPS client settings.
 - Defines server details, API endpoint, and response handling.
 
-<img src="sources/DataTypes.png" alt="Data types">
+![Data types](sources/DataTypes.png)
 
 ### Variables
 **alarmProcessingBlocked**
@@ -69,7 +69,8 @@ The main idea of the alarm reader is that we use one general structure for colle
 
 **clientSettings**
 - Stores the configuration settings for the HTTPS client.
-    <img src="sources/ClientSet.png" alt="Client">
+
+	![Client](sources/ClientSet.png)
 
 **WStringToUTF8**
 - Converts WString data to UTF-8 encoding for proper text transmission.
@@ -108,7 +109,7 @@ The main idea of the alarm reader is that we use one general structure for colle
 **MAX_REQUEST_LEN**
 - Determines the maximum request length for HTTP communication.
 
-<img src="sources/Variables.png" alt="Variables">
+![Variables](sources/Variables.png)
 
 ## Description of the source code
 ### Init
