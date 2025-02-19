@@ -9,20 +9,20 @@ The main idea of the alarm reader is that we use one general structure for colle
 - Add the configuration file **.mpAlarmXHistory** to the project.
 - Ensure the number of elements in this configuration matches the **maximum number of languages** used in the program variables.
 
-    <img src="sources/AlarmSynConfView.png" alt="Configuration View">
+    <img src="/sources/AlarmSynConfView.png" alt="Configuration View">
 
 - The settings for all elements should be the same as shown in the image below:
 
-    <img src="sources/AlarmSynConfViewSettings.png" alt="Element settings">
+    <img src="/sources/AlarmSynConfViewSettings.png" alt="Element settings">
 
 - Insert the program into **CPU.sw**, to the same **Cyclic** as **AlarmCore**.
 
-    <img src="sources/CpuSW.png" alt="Cpu.sw">
+    <img src="/sources/CpuSW.png" alt="Cpu.sw">
 
 - Create an SSL configuration and add certificates to the connection.
 
-	<img src="sources/SSLfolder.png" alt="SslFolder">
-	<img src="sources/SSLConfig.png" alt="SslConfig">
+	<img src="/sources/SSLfolder.png" alt="SslFolder">
+	<img src="/sources/SSLConfig.png" alt="SslConfig">
 
 ### Logical view
  - Copy the program into the **Logical View** of the project.
