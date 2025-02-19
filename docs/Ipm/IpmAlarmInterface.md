@@ -1,22 +1,33 @@
 # Alarm sending from PLC to IPM
 
 ## Description
-The main idea of the alarm reader is that we use one general structure for collecting alarms in different language versions and sending them to an HTTP server. These alarms are stored in a unified format, eliminating the need for custom programming to adjust the core functionality.
+The main idea of the alarm reader is that we use one general structure for collecting alarms in different language versions and sending them to an HTTPS server. These alarms are stored in a unified format, eliminating the need for custom programming to adjust the core functionality.
 
 ## Implemetation
 - The source codes are available for download at the end of the documentation.
 ### Configuration View
 - Add the configuration file **.mpAlarmXHistory** to the project.
 - Ensure the number of elements in this configuration matches the **maximum number of languages** used in the program variables.
+
     <img src="sources/AlarmSynConfView.png" alt="Configuration View">
+
 - The settings for all elements should be the same as shown in the image below:
+
     <img src="sources/AlarmSynConfViewSettings.png" alt="Element settings">
- - Insert the program into **CPU.sw**, to the same **Cyclic** as **AlarmCore**.
+
+- Insert the program into **CPU.sw**, to the same **Cyclic** as **AlarmCore**.
+
     <img src="sources/CpuSW.png" alt="Cpu.sw">
+
+- Create an SSL configuration and add certificates to the connection.
+
+	<img src="sources/SSLfolder.png" alt="SslFolder">
+	<img src="sources/SSLConfig.png" alt="SslConfig">
 
 ### Logical view
  - Copy the program into the **Logical View** of the project.
-    <img src="sources/PrgInserting.png" alt="Program">
+
+	<img src="sources/PrgInserting.png" alt="Program">
 
 ## Description of the data types and variables
 ### Data types
@@ -37,7 +48,7 @@ The main idea of the alarm reader is that we use one general structure for colle
 - Handles the request structure and keeps track of the current alarm being transmitted.
 
 **httpsClientSettings**
-- Configures HTTP(S) client settings.
+- Configures HTTPS client settings.
 - Defines server details, API endpoint, and response handling.
 
 <img src="sources/DataTypes.png" alt="Data types">
@@ -47,11 +58,17 @@ The main idea of the alarm reader is that we use one general structure for colle
 - Indicates whether alarm processing is currently blocked.
 - By default, sending is blocked after the PLC starts until the first acknowledgment is pressed.
 
+**SslOpen**
+- Loads SSL configuration ident.
+
+**sslIdent**
+- Stores ssl ident
+
 **Client**
-- Defines the HTTP client instance with server settings, including host, port, and resource.
+- Defines the HTTPS client instance with server settings, including host, port, and resource.
 
 **clientSettings**
-- Stores the configuration settings for the HTTP client.
+- Stores the configuration settings for the HTTPS client.
     <img src="sources/ClientSet.png" alt="Client">
 
 **WStringToUTF8**
@@ -148,12 +165,22 @@ The main idea of the alarm reader is that we use one general structure for colle
 		}	
 	```
 
+- Get the **sslIdent**
+??? example "Getting sslIdent"
+	``` c
+		SslOpen.Execute = true;
+		brsstrcpy((UDINT) SslOpen.Name, (UDINT) "IPM_AlarmTLS");
+		ArSslOpen(&SslOpen);
+		sslIdent = SslOpen.Ident;
+	```
+
 - The **httpsClient** settings are initialized.  
 
 ??? example "Setting httpClient"
 	``` c
 		Client.method 			= httpMETHOD_POST;
 		Client.option 			= httpOPTION_HTTP_11;
+		Client.sslCfgIdent		= sslIdent;
 		Client.pHost 			= &clientSettings.host;
 		Client.hostPort			= clientSettings.hostPort;
 		Client.pUri 			= &clientSettings.resource;
@@ -330,6 +357,20 @@ The program consists of two step-based state machines:
 ## Testing
 - To test alarm sending, you can use the **Mockoon** software: 
 https://mockoon.com/download/
+
+## Project-Specific Adjustments
+### Change the Server IP Address (or port) for Sending Alarms
+- To change the server IP address, we need to update the **clientSettings.host** and **clientSettings.requestHeader.host** variables.
+- To change the server port, we need to update the **clientSettings.hostPort**.
+
+### Changing the Number of Languages
+1. Add Additional Elements in **.mpAlarmXHistory**
+2. Change the Variable **MAX_LANGUAGES**
+3. Connect New Elements to **alarmHistMpLinks** in the **INIT** Section
+
+### Change of Certificates
+- We will request the cellInterfaceService certificates for the current project from the IPM team.
+- Then, we will replace the existing certificates in the template with the updated ones.
 
 ## Source code
 Complete source code for download (After clicking, it takes a moment before the download starts):
