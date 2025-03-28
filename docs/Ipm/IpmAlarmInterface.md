@@ -309,21 +309,24 @@ The program consists of two step-based state machines:
 				break;
 			
 			case 3:
-				if (Client.httpStatus = 200)
+				alarmSender.delay.IN = true;
+				if ((Client.status != ERR_FUB_BUSY) || alarmSender.delay.Q)
 				{
 					Client.send = false;
+					Client.enable = false;
+					alarmSender.delay.IN = false;
 					if (alarmSender.currentAlarm < 0)
 					{
 						alarmReader.dataProcessed = true;
 						alarmSender.step = 0;
 					}else
-					{
+					{	
 						alarmSender.step = 2;
 					}
 				}
 				break;
 		}
-		httpClient(&Client);
+		httpsClient(&Client);
 	```
 
 ### Exit
