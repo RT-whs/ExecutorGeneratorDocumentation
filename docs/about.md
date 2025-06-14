@@ -11,7 +11,8 @@ Contains these domains:
 - B+R plc  
 - Siemens plc  
 - Kuka robots  
-- Fanuc robots    
+- Fanuc robots
+- Remote control by rc.whs.cz    
 
 
 
