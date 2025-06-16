@@ -16,6 +16,7 @@ ProjectName/
 └── Resources
     ├── Dockers
     ├── Libraries
+    ├── DeviceDescriptionFiles
     ├── Pictures
     └── Tools
 ```
