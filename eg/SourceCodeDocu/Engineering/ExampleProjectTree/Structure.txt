@@ -1,0 +1,17 @@
+ProjectName/
+├── Project
+│   ├── Controllers
+│   │   └── plc
+│   ├── Devices
+│   │   ├── Cameras
+│   │   └── Robots
+│   ├── Docu
+│   ├── Engineering
+│   └── Hmi
+└── Resources
+    ├── Dockers
+    ├── Libraries
+    ├── Pictures
+    └── Tools
+
+14 directories, 0 files
