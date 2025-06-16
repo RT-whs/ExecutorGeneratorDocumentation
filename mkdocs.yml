@@ -60,32 +60,37 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - Documentation: 
-    - This documentation: docu/index.md
-    - Executor generator:
-      - Instalation: eg/index.md
-      - Library system: eg/LibraryManager.md
-      - Project structure: eg/ProjectStructure.md
-    - Ipm:
-      - Data from word files docu: Ipm/IpmGeneral.md
-      - Ipm Results: Ipm/IpmResults.md
-      - Ipm alarm synchronization: Ipm/IpmAlarmInterface.md
-    - Magna projects: 
-      - Standard: magna/magna.md
-      - 231080 - IMM 25:
-        - Overview: magna/231080 - IMM 25/Overview.md
-        - Robots: magna/231080 - IMM 25/Robots.md
-        - IP addresses: magna/231080 - IMM 25/IP addresses.md
-    - Tools:
-      - AutoHotKey : tools/AutoHotKey/Autohotkey.md
-      - Kicad: tools/Kicad/Kicad.md
-      - Adapter settings: tools/Adapter_settings/Adapter_settings.md
+  - This documentation: docu/index.md
+  - Executor generator:
+    - Instalation: eg/index.md
+    - Library system: eg/LibraryManager.md
+    - Project structure: eg/ProjectStructure.md
+    - Source code documentation: 
+      - Documentation conventions: eg/SourceCodeDocu/DocumentationConventios.md
+      - Engineering :    
+        - Structure : eg/SourceCodeDocu/Engineering/EngineeringStructure.md    
+        - Tag generator : eg/SourceCodeDocu/Engineering/TagGenerator.md
+        - Sw blocks : eg/SourceCodeDocu/Engineering/swblock.md
+  - Ipm:
+    - Data from word files docu: Ipm/IpmGeneral.md
+    - Ipm Results: Ipm/IpmResults.md
+    - Ipm alarm synchronization: Ipm/IpmAlarmInterface.md
+  - Magna projects: 
+    - Standard: magna/magna.md
+    - 231080 - IMM 25:
+      - Overview: magna/231080 - IMM 25/Overview.md
+      - Robots: magna/231080 - IMM 25/Robots.md
+      - IP addresses: magna/231080 - IMM 25/IP addresses.md
+  - Tools:
+    - AutoHotKey : tools/AutoHotKey/Autohotkey.md
+    - Kicad: tools/Kicad/Kicad.md
+    - Adapter settings: tools/Adapter_settings/Adapter_settings.md
 
-    - Functions:
-      - KUKA:
-        - Synchronization: functions/KUKA/Sync.md
-      
-    - About: about.md
+  - Functions:
+    - KUKA:
+      - Synchronization: functions/KUKA/Sync.md
+    
+  - About: about.md
 
 hide:
   - navigation
